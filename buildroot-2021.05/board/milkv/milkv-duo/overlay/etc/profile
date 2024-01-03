@@ -33,5 +33,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-export TERM=vt100
+#export TERM=vt100
+export TERM=xterm-color
 export TERMINFO=/usr/share/terminfo
