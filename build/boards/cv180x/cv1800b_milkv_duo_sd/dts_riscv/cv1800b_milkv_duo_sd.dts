@@ -9,11 +9,30 @@
 };
 
 &spi2 {
-	status = "okay";
+        status = "okay";
+        cs-gpios = <&porta 18 0>;
 
-	spidev@0 {
-		status = "okay";
-	};
+        spidev@0 {
+                status = "disabled";
+};
+
+        st7789v: st7789v@0{
+                compatible = "sitronix,st7789v";
+                reg = <0>;
+                status = "okay";
+                spi-max-frequency = <48000000>;
+                spi-cpol;
+                spi-cpha;
+                rotate = <0>; //This depends on your screen
+                width = <240>;
+                height = <240>;
+                fps = <60>;
+                rgb;
+                buswidth = <8>;
+                dc-gpios = <&porta 24 GPIO_ACTIVE_HIGH>;
+                reset-gpios = <&porta 23 GPIO_ACTIVE_HIGH>;
+                debug = <0x4000000>;
+        };
 };
 
 &uart4 {
