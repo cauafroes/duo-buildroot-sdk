@@ -23,10 +23,20 @@
                 spi-max-frequency = <48000000>;
                 spi-cpol;
                 spi-cpha;
-                rotate = <0>; //This depends on your screen
-                width = <240>;
-                height = <240>;
-                fps = <60>;
+                
+		//Waveshare 1.54" ST7789V
+		//https://www.waveshare.com/product/1.54inch-lcd-module.htm
+		//width = <240>;
+		//height = <240>;
+		//rotate = <0>; //This depends on your screen
+
+		//Waveshare 2.0" ST7789VW
+		//https://www.waveshare.com/2inch-lcd-module.htm
+		width = <240>;
+		height = <320>;
+                rotate = <270>; //This depends on your screen
+
+		fps = <60>;
                 rgb;
                 buswidth = <8>;
                 dc-gpios = <&porta 24 GPIO_ACTIVE_HIGH>;
