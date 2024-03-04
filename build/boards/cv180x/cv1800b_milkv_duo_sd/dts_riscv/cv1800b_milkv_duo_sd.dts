@@ -9,40 +9,11 @@
 };
 
 &spi2 {
-        status = "okay";
-        cs-gpios = <&porta 18 0>;
+	status = "okay";
 
-        spidev@0 {
-                status = "disabled";
-};
-
-        st7789v: st7789v@0{
-                compatible = "sitronix,st7789v";
-                reg = <0>;
-                status = "okay";
-                spi-max-frequency = <48000000>;
-                spi-cpol;
-                spi-cpha;
-                
-		//Waveshare 1.54" ST7789V
-		//https://www.waveshare.com/product/1.54inch-lcd-module.htm
-		//width = <240>;
-		//height = <240>;
-		//rotate = <0>; //This depends on your screen
-
-		//Waveshare 2.0" ST7789VW
-		//https://www.waveshare.com/2inch-lcd-module.htm
-		width = <240>;
-		height = <320>;
-                rotate = <270>; //This depends on your screen
-
-		fps = <60>;
-                rgb;
-                buswidth = <8>;
-                dc-gpios = <&porta 24 GPIO_ACTIVE_HIGH>;
-                reset-gpios = <&porta 23 GPIO_ACTIVE_HIGH>;
-                debug = <0x4000000>;
-        };
+	spidev@0 {
+		status = "okay";
+	};
 };
 
 &uart4 {
@@ -55,6 +26,5 @@
 };
 
 / {
-
+	model = "Meshtastic Milk-V Duo";
 };
-
