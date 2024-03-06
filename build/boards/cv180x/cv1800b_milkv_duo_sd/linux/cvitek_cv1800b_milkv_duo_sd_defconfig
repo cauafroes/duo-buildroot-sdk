@@ -3478,7 +3478,8 @@ CONFIG_LOCK_DEBUGGING_SUPPORT=y
 # CONFIG_RCU_SCALE_TEST is not set
 # CONFIG_RCU_TORTURE_TEST is not set
 # CONFIG_RCU_REF_SCALE_TEST is not set
-CONFIG_RCU_CPU_STALL_TIMEOUT=21
+#Remove BUG - https://lists.ubuntu.com/archives/kernel-team/2022-October/133734.html
+#CONFIG_RCU_CPU_STALL_TIMEOUT=21
 CONFIG_RCU_TRACE=y
 # CONFIG_RCU_EQS_DEBUG is not set
 # end of RCU Debugging
