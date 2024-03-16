@@ -29,7 +29,7 @@
 &i2c4 {
 	status = "disabled";
 };
-
+	model = "Meshtastic Milk-V Duo 256"
 / {
 
 };
